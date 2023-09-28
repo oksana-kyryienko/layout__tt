@@ -1,0 +1,24 @@
+.h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+
+  @include onPhone {
+    font-size: 15px;
+  }
+
+  @include onTablet {
+    font-size: 22px;
+  }
+
+}
+
+.p {
+  font-size: 16px;
+}
+
+.pwhite {
+  color: #fff;
+}

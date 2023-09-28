@@ -1,0 +1,16 @@
+.head {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  background-image: url(../images/top.png);
+  background-repeat: no-repeat;
+
+
+  &__h2 {
+    padding-left: 15px;
+  }
+
+
+
+}
+

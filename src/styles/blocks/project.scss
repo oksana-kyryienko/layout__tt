@@ -1,0 +1,84 @@
+.project {
+  margin-top: 70px;
+  &__container {
+    position: relative;
+    display: flex;
+  }
+  &__image {
+    position: relative;
+    max-width: 570px;
+    width: 100%;
+    img {
+      position: absolute;
+      bottom: 0;
+      object-fit: cover;
+    }
+
+    }
+
+  &__content {
+    flex: 0 1 800;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    p {
+
+      line-height: 130%;
+      letter-spacing: 0.66px;
+
+      span {
+        color: #181818;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+  }
+
+  &__info {
+    padding: 24px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 300%;
+      height: 100%;
+      top: 0;
+      left: -200%;
+      z-index: -1;
+      background: linear-gradient(90deg, #1bb147 10.22%, #018ed5 104.68%);
+    }
+
+  }
+
+  &__name {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  
+  &__position {
+    color: #fff;
+  }
+}

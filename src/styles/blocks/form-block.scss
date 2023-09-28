@@ -1,0 +1,15 @@
+.form-block {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  &__form {
+    width: 100%;
+  }
+}

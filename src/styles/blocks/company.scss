@@ -1,0 +1,53 @@
+.company {
+  background: url("../images/background.jpg") 50% / cover no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 70px;
+
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 880px;
+
+    p {
+      color: #fff;
+      line-height: 130%;
+      letter-spacing: 0.66px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__button {
+    align-self: center;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    background: #fa0606;
+    padding: 16px 40px;
+
+
+
+    &:not(:last-child) {
+      margin: 30px;
+    }
+  }
+
+  &__info {
+    color: #fff;
+    text-align: center;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+}

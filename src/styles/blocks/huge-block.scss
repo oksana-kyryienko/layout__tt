@@ -1,0 +1,65 @@
+.huge-block {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    flex-direction: row;
+    
+    @include onPhone {
+      flex-direction: column;
+    }
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+
+  }
+  &__inner {
+    padding-left: 17px;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    @include onPhone {
+      padding-left: 0;
+    }
+
+    @include onTablet {
+      padding-left: 0;
+    }
+
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    color: #000;
+    font-weight: 700;
+    line-height: 130%;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 15px;
+
+    @include onTablet {
+      margin-top: 25px;
+    }
+
+    @include onPhone {
+      margin-top: 50px;
+    }
+  }
+
+  &__partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 12px;
+  }
+
+  &__image {
+    align-self: center;
+  }
+}

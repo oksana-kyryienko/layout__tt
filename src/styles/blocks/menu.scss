@@ -1,0 +1,25 @@
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    @include onPhone {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #181818;
+    font-size: 24px;
+  }
+}

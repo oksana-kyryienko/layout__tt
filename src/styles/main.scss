@@ -1,0 +1,47 @@
+@import "./blocks/mixin";
+@import "./blocks/reset.scss";
+@import "./blocks/text.scss";
+@import "./blocks/head.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/page.scss";
+@import "./blocks/form.scss";
+@import "./blocks/huge-block.scss";
+@import "./blocks/company.scss";
+@import "./blocks/project.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/join.scss";
+@import "./blocks/form-block.scss";
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  font-size: 1.375rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  @include onPhone {
+    overflow: hidden;
+  }
+}
+
+.gradient-title {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #1bb147 10.22%, #018ed5 104.68%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 70px;
+}

@@ -1,0 +1,128 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 114, 188, 0.4) 0%,
+      rgba(0, 114, 188, 0.4) 100%
+    ),
+    lightgray url("../images/bg_one.jpg") 50% / cover no-repeat;
+  border: 5px solid #878787;
+  max-width: 80%;
+  padding: 48px 33px 61px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 5px solid #d9d9d9;
+
+    @include onPhone{
+      width: 0;
+    }
+  }
+
+  &::before {
+    transform: rotate(-3deg);
+    background: url("../images/bg_two.jpg") lightgray 50% / cover
+      no-repeat;
+  }
+  &::after {
+    transform: rotate(3deg);
+    background: url("../images/bg_one.jpg") 50% / cover no-repeat;
+  }
+
+
+  &__title {
+    position: relative;
+    align-self: center;
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #1bb147 10.22%, #018ed5 104.68%);
+      max-width: 360px;
+    }
+
+    &::before {
+      top: -4px;
+      left: 0;
+    }
+
+    &::after {
+      bottom: -8px;
+      left: 0;
+    }
+  }
+
+  &__huge-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+
+    &.error small {
+      visibility: visible;
+      height: 100%;
+    }
+
+    small {
+      height: 0;
+      color: red;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      margin-top: 10px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__input {
+    font-size: 20px;
+    padding: 15px;
+    color: black;
+    background-color: #fff;
+    border: 2px solid transparent;
+
+    .success & {
+      border-color: green;
+    }
+
+    .error & {
+      border-color: red;
+    }
+    &:placeholder {
+      color: #878787;
+    }
+  }
+
+  &__button {
+    margin-top: 35px;
+    background: #fa0606;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 0;
+    transition: all .3s ease;
+
+    &:hover {
+      background: white;
+      color: #fa0606;
+    }
+  }
+}
